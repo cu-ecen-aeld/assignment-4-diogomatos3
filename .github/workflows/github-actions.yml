@@ -13,9 +13,6 @@ jobs:
         steps:
           - uses: actions/checkout@v2
           - name: Checkout submodules
-            env:
-              http_proxy: "http://127.0.0.1:3128/"
-              https_proxy: "http://127.0.0.1:3128/"
             run: git submodule update --init --recursive
           - uses: webfactory/ssh-agent@v0.5.3
             with:
